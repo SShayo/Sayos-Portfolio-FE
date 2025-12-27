@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shayo Sho | Webflow Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <strong>Sayo Shonde</strong>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero bg-hero animate-on-scroll">
+  <div class="hero-inner hero-grid">
+    <div class="hero-text">
+      <h1>Webflow Developer<br>Frontend Engineer</h1>
+      <p>I design and build modern websites with Webflow and frontend tools.</p>
+      <div class="hero-buttons">
+        <a href="#work" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/Feyisayo Shonde.jpeg" alt="Shayo Sho" />
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave">
+  <svg viewBox="0 0 500 80" preserveAspectRatio="none">
+    <path d="M0,40 C150,80 350,0 500,40 L500,0 L0,0 Z" style="stroke:none; fill:#2c2c2c;"></path>
+  </svg>
+</div>
+
+<!-- PROJECTS -->
+<section id="work" class="section bg-projects animate-on-scroll">
+  <h2>Selected Work</h2>
+  <div id="projects"></div>
+
+  <!-- See More Button -->
+<div style="margin-top:40px; text-align:center;">
+  <a href="https://github.com/SShayo" target="_blank" class="btn-primary">See More on GitHub</a>
+</div>
+
+</section>
+
+<!-- WAVE -->
+<div class="wave">
+  <svg viewBox="0 0 500 80" preserveAspectRatio="none">
+    <path d="M0,40 C150,0 350,80 500,40 L500,0 L0,0 Z" style="stroke:none; fill:#1f1f1f;"></path>
+  </svg>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section bg-about animate-on-scroll">
+  <h2>About Me</h2>
+  <p>
+    I started my journey in frontend development back in 2020 as an intern, 
+    eager to learn how websites are built from the ground up. During this time, 
+    I gained hands-on experience with HTML, CSS, and JavaScript, and developed a 
+    solid foundation in creating responsive and user-friendly interfaces.
+  </p>
+  <p>
+    To deepen my skills, I joined the Check-Learn training program, where I focused 
+    on Webflow, UI engineering, and modern frontend workflows. This program allowed 
+    me to explore the nuances of design implementation, interactions, and workflow 
+    optimization, giving me the tools to translate designs into functional, high-quality websites.
+  </p>
+  <p>
+    Following that, I expanded my expertise by stepping into QA (Quality Assurance), 
+    where I learned the importance of testing, bug tracking, and ensuring a seamless 
+    user experience. This combination of frontend development, Webflow design, 
+    and QA testing allows me to not only build interfaces that look great but also 
+    function flawlessly across devices.
+  </p>
+  <p>
+    Today, I continue to grow as a frontend developer with a strong Webflow and QA 
+    background, passionate about delivering clean, responsive, and user-focused 
+    web experiences. I thrive at the intersection of design, development, and quality, 
+    bringing both creativity and precision to every project I work on.
+  </p>
+</section>
+
+<!-- WAVE -->
+<div class="wave">
+  <svg viewBox="0 0 500 80" preserveAspectRatio="none">
+    <path d="M0,40 C150,80 350,0 500,40 L500,0 L0,0 Z" style="stroke:none; fill:#2c2c2c;"></path>
+  </svg>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="section bg-contact animate-on-scroll">
+  <h2>Contact</h2>
+  <div class="contact-links">
+  <p>Email: shayoshonde.com</p>
+  <p>LinkedIn: https://www.linkedin.com/in/feyisayo-shonde/</p>
+  <p>GitHub: https://github.com/SShayo</p>
+  </div>
+</section>
+
+<script src="app.js"></script>
+
+<!-- Smooth Scroll & Animate -->
+<script>
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      const yOffset = -80;
+      const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top:y, behavior:'smooth' });
+    });
+  });
+
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach(el=>{
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      if(rect.top <= windowHeight - 100){ el.classList.add('visible'); }
+    });
+  }
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
+</script>
+
+</body>
+</html>

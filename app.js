@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Coffee Website (Webflow)",
-    desc: "High-conversion Webflow website with Responsive view.",
+    desc: "Coffee Roasters website built with Webflow..",
     image: "images/coffee.png",
     live: "https://sshayo.github.io/CoffeeRoasters/"
   },
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Product Card Item (HTML/CSS)",
-    desc: "Responsive Product Card Item challenge using HTML and CSS for e-commerce.",
+    desc: "Card Item challenge using HTML and CSS for e-commerce.",
     image: "images/image-product-desktop.jpg",
     live: "https://sshayo.github.io/frontend_mentor_17days_challenge_day2/"
   }
